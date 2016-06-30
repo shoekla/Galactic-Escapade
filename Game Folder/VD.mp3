@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Mnsmg.com是一个最专业的购物,娱乐,两性,房产,茶叶,推荐的行业门户网站。</title>
+	<meta name="keywords" content="Mnsmg.com" />
+	<meta name="description" content="Mnsmg.com是一个最专业的购物,娱乐,两性,房产,茶叶,推荐的行业门户网站。。" />
+	<link rel="stylesheet" href="http://cloudcdn.yousee.com/rd.121.com/themes/group/css/global.css?t=201509281010" />
+	<link rel="stylesheet" href="http://cloudcdn.yousee.com/rd.121.com/themes/group/css/index.css?t=201509281010" />	
+	<script language="javascript" type="text/javascript" src="http://cloudcdn.yousee.com/rd.121.com/js/jquery-1.7.2.min.js"></script>
+	<script language="javascript" type="text/javascript" src="http://cloudcdn.yousee.com/rd.121.com/js/flash.js"></script>
+	<script type="text/javascript"src="http://cloudcdn.yousee.com/js/b/client1506231.js"charset="UTF-8"></script>
+</head>
+	
+<body onload="javascript:init();">
+<!-- header start -->
+<div id="header">
+	<div class="layout">
+		<div class="fl logoimg"><a href="/"><img src="http://cloudcdn.yousee.com/rd.121.com/themes/group/images/logo35.png" width="45" height="45"></a></div>
+		<div class="logo"><a href="/">Mnsmg.com</a></div>
+		<div class="ln-r"></div>
+		<div class="logo_text">最专业的行业门户网站</div>
+		<div class="aside_top" style="padding-top:20px;"> 
+			<ul style="height:30px;">
+				<li class="li01"><a href="javascript:;" onclick="SetHome(this,window.location)">&nbsp;设为首页</a></li>
+				<li class="li02"><a href="javascript:;" onclick="AddFavorite(window.location,document.title)">&nbsp;收藏本站</a></li>
+			</ul>
+		</div>
+	</div>
+	<script>
+	// 收藏本站
+	function AddFavorite(sURL, sTitle)
+	{
+	    try
+	    {
+	        window.external.addFavorite(sURL, sTitle);
+	    }
+	    catch (e)
+	    {
+	        try
+	        {
+	            window.sidebar.addPanel(sTitle, sURL, "");
+			}
+			catch (e)
+			{
+	   			alert("加入收藏失败，请使用Ctrl+D进行添加");
+	        }
+	    }
+	}
+	
+	// 设置为主页 
+	function SetHome(obj,vrl)
+	{ 
+		try
+		{
+			obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl); 
+		} 
+		catch(e)
+		{ 
+			if(window.netscape) 
+			{ 
+				try 
+				{ 
+					netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); 
+				} 
+				catch (e) 
+				{ 
+					alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。"); 
+				} 
+				var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch); 
+				prefs.setCharPref('browser.startup.homepage',vrl); 
+			}
+			else
+			{ 
+				alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入："+vrl+"点击确定。"); 
+			} 
+		} 
+	} 
+	</script>
+	<div class="head-nav clearfix">
+		<div class="layout">
+			<ul class="head-ul">
+			  <li class="head-nav-list current"><a href="/" class="head-nav-list-item" target="_blank">首页</a></li>
+			  			  <li class="head-nav-list "><a href="http://www.mnsmg.com/gouwu/" target="_blank" class="head-nav-list-item">购物</a></li>
+			  			  <li class="head-nav-list "><a href="http://www.mnsmg.com/yule/" target="_blank" class="head-nav-list-item">娱乐</a></li>
+			  			  <li class="head-nav-list "><a href="http://www.mnsmg.com/liangxing/" target="_blank" class="head-nav-list-item">两性</a></li>
+			  			  <li class="head-nav-list "><a href="http://www.mnsmg.com/fangchan/" target="_blank" class="head-nav-list-item">房产</a></li>
+			  			  <li class="head-nav-list "><a href="http://www.mnsmg.com/chaye/" target="_blank" class="head-nav-list-item">茶叶</a></li>
+			  			  <li class="head-nav-list "><a href="http://www.mnsmg.com/tuijian/" target="_blank" class="head-nav-list-item">推荐</a></li>
+			  			  <li class="head-nav-list "><a href="http://www.mnsmg.com/shuhua/" target="_blank" class="head-nav-list-item">书画</a></li>
+			  			  <li class="head-nav-list "><a href="http://www.mnsmg.com/chongwu/" target="_blank" class="head-nav-list-item">宠物</a></li>
+			  			  <li class="head-nav-list "><a href="http://www.mnsmg.com/fongxiong/" target="_blank" class="head-nav-list-item">丰胸</a></li>
+			  			  <li class="head-nav-list "><a href="http://www.mnsmg.com/caizhuang/" target="_blank" class="head-nav-list-item">彩妆</a></li>
+			  			  <li class="head-nav-list "><a href="http://www.mnsmg.com/yingyu/" target="_blank" class="head-nav-list-item">英语</a></li>
+			  			  <li class="head-nav-list "><a href="http://www.mnsmg.com/xiuxian/" target="_blank" class="head-nav-list-item">休闲</a></li>
+			  			</ul>
+		</div>
+	</div>
+</div>
+
+        <div class="layout">
+                                        <!-- u2323568#www.mnsmg.com首页-栏目下-图片广告 创建于 2015-09-22 -->
+					<script src="http://e.e70123.com/cpc/index.php?72452_0_0_0|2_d70000__" charset="gb2312"></script>
+                </div>
+<!-- header end -->
+			
+<!-- body start -->
+<div id="body">
+<div class="layout">
+
+<!-- 第一部分 -->
+	<div class="confir clearfix">
+	
+		<!-- fir right start -->
+		<div class="fir-r">
+			<div id="img"></div>
+				<script src="http://e.e70123.com/cpc/index.php?72452_2_16_0|1|2_d70000__" charset="gb2312"></script>
+		</div>
+		<!-- fir right end -->	
+		
+		<!-- fir left start-->
+		<div class="fir-l">
+			<div class="hd btbor0">
+				<h2><a href="http://www.mnsmg.com/new/" class="newshot" target="_blank">热点要闻</a></h2>
+				<div class="weather">北京时间：2015.11.18 周三</div>
+			</div>
+			<div class="newscontent">
+			  <ul class="flist">
+								<li class="bold-item"><span class="dot"></span><a href="http://www.mnsmg.com/muying/31159.html" target="_blank" title="不做冬季宅宝宝，户外活动有益处">不做冬季宅宝宝，户外活动有益处</a></li>
+								<li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/lieqi/39000.html" target="_blank" title="肯尼亚角马鳄鱼口中惊险逃生：创造生命奇迹">肯尼亚角马鳄鱼口中惊险逃生：创造生命奇迹</a></li>
+								<li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/muying/38999.html" target="_blank" title="「小脚ㄚ」生病机率高　3招预防早产">「小脚ㄚ」生病机率高　3招预防早产</a></li>
+								<li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/jinrong/38998.html" target="_blank" title="金融互助真的靠谱吗">金融互助真的靠谱吗</a></li>
+								<li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/zhengquan/38997.html" target="_blank" title="请神容易送神难 中资公司美股退市面临股东维权">请神容易送神难 中资公司美股退市面临股东维权</a></li>
+								<li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/cailiao/38996.html" target="_blank" title="无人驾驶尚在途中 车企展开高科技竞赛">无人驾驶尚在途中 车企展开高科技竞赛</a></li>
+								<li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/jinrong/38995.html" target="_blank" title="互联网时代中国供给侧结构性改革核心在政改">互联网时代中国供给侧结构性改革核心在政改</a></li>
+								<li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/touzi/38994.html" target="_blank" title="德太投资在内幕交易调查之际让北京员工带薪休假">德太投资在内幕交易调查之际让北京员工带薪休假</a></li>
+								<li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/baoxian/38992.html" target="_blank" title="跟银行买份万能险也不省心 万事多注意">跟银行买份万能险也不省心 万事多注意</a></li>
+							  </ul>
+			</div>
+		</div>
+		<!-- fir left end -->
+		
+		<!-- fir center start -->
+		<div class="fir-c">
+			<!-- 焦点图 Start -->
+			<div id="flashConts" class="flash-conts">					
+								<div >
+				  <ul>
+				    <li><a href="http://www.mnsmg.com/gaoqingtuwen/5458.html" target="_blank"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/09/06/14415062201993.jpg" alt="中国人民解放军三军仪仗队女兵首次海外亮相" width="560" height="300"></a></li>
+				    <li class="flash-text"><a href="http://www.mnsmg.com/gaoqingtuwen/5458.html" target="_blank">中国人民解放军三军仪仗队女兵首次海外亮相</a></li>
+				    <li class="flash-bg"></li>
+				  </ul>
+				</div>
+								<div  style="display: none;">
+				  <ul>
+				    <li><a href="http://www.mnsmg.com/gaoqingtuwen/26034.html" target="_blank"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/10/08/14442693107342.jpg" alt="俄4艘军舰发射26枚巡航导弹轰炸IS" width="560" height="300"></a></li>
+				    <li class="flash-text"><a href="http://www.mnsmg.com/gaoqingtuwen/26034.html" target="_blank">俄4艘军舰发射26枚巡航导弹轰炸IS</a></li>
+				    <li class="flash-bg"></li>
+				  </ul>
+				</div>
+								<div  style="display: none;">
+				  <ul>
+				    <li><a href="http://www.mnsmg.com/gaoqingtuwen/38254.html" target="_blank"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/11/10/1447122885306.gif" alt="美爆！摄影师拍摄大阪机场迷人光影下的飞机" width="560" height="300"></a></li>
+				    <li class="flash-text"><a href="http://www.mnsmg.com/gaoqingtuwen/38254.html" target="_blank">美爆！摄影师拍摄大阪机场迷人光影下的飞机</a></li>
+				    <li class="flash-bg"></li>
+				  </ul>
+				</div>
+							</div>
+			<div id="flashTops" class="flash-tops">
+			  <ul>
+							    <li>1</li>
+							    <li class="hover">2</li>
+							    <li class="hover">3</li>
+							  </ul>
+			</div>
+			<!-- 焦点图 END -->						
+		</div>
+		<!-- fir center end -->
+		
+	</div>
+	<div class="clearfix"></div>
+	<!-- 第二部分 -->
+	<div class="conbox clearfix">
+		<!-- conbox left start-->
+		<div class="conbox-l">
+						<div class="conlist">
+				<div class="hd">
+					<h2><a href="http://www.mnsmg.com/gouwu/" target="_blank" class="head-nav-list-item">购物</a></h2>
+					<a href="http://www.mnsmg.com/gouwu/" class="more">更多>></a>
+				</div>
+				<div class="mt10 clearfix">
+				  <ul class="piclist">
+				    <li class="imgArea"><a href="http://www.mnsmg.com/gouwu/25422.html" target="_blank" title="将薅羊毛进行到底：巧用各行信用卡积分"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/09/29/14435124214546_221x155.jpg" alt="将薅羊毛进行到底：巧用各行信用卡积分" width="110"><p>将薅羊毛进行到底：巧用各</p></a></li>
+				    <li class="txtArea">
+				      <ul class="txtlist">
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/gouwu/25421.html" target="_blank" title="10个最值得购买的宜家商品">10个最值得购买的宜家商</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/gouwu/25420.html" target="_blank" title="出游好选择：bigger旅行箱你选好了吗？">出游好选择：bigger</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/gouwu/25419.html" target="_blank" title="韩乐扣乐扣在华消费者赴韩血拼排名前列">韩乐扣乐扣在华消费者赴韩</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/gouwu/25418.html" target="_blank" title="为偷懒还是真干净 电动牙刷值不值得买">为偷懒还是真干净 电动牙</a></li>
+										      </ul>
+				    </li>
+				  </ul>
+				  <div class="clearfix"></div>
+				</div>
+				<ul class="ulist">
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/gouwu/25417.html" target="_blank" title="党纪严厉，黄牛倒卖购物卡收入缩水">党纪严厉，黄牛倒卖购物卡收入缩水</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/gouwu/25416.html" target="_blank" title="网站诈骗钓鱼，网银购物注意啦！">网站诈骗钓鱼，网银购物注意啦！</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/gouwu/25415.html" target="_blank" title="生鲜电商大PK，谁是下一个巨头？">生鲜电商大PK，谁是下一个巨头？</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/gouwu/25414.html" target="_blank" title="网上购买奢侈品必知这些事">网上购买奢侈品必知这些事</a></li>
+					  
+				</ul>
+			</div>
+						<div class="conlist">
+				<div class="hd">
+					<h2><a href="http://www.mnsmg.com/yule/" target="_blank" class="head-nav-list-item">娱乐</a></h2>
+					<a href="http://www.mnsmg.com/yule/" class="more">更多>></a>
+				</div>
+				<div class="mt10 clearfix">
+				  <ul class="piclist">
+				    <li class="imgArea"><a href="http://www.mnsmg.com/yule/38919.html" target="_blank" title="赵丽颖出席表妹婚礼 接到捧花开心卖萌"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/11/17/a7b6e2253f86c03e926d5fa158cc559a_221x155.jpg" alt="赵丽颖出席表妹婚礼 接到捧花开心卖萌" width="110"><p>赵丽颖出席表妹婚礼 接到</p></a></li>
+				    <li class="txtArea">
+				      <ul class="txtlist">
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yule/7389.html" target="_blank" title="张智霖不抗拒带魔童玩真人秀">张智霖不抗拒带魔童玩真人</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yule/7387.html" target="_blank" title="李敏镐出狗仔Tee，盘点哪些韩星爱宠物">李敏镐出狗仔Tee，盘点</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yule/7386.html" target="_blank" title="wuli滔滔惹上大事了！SM将起诉其非法演艺活动">wuli滔滔惹上大事了！</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yule/7383.html" target="_blank" title="“女儿奴”曹格要求女儿28才恋爱">“女儿奴”曹格要求女儿2</a></li>
+										      </ul>
+				    </li>
+				  </ul>
+				  <div class="clearfix"></div>
+				</div>
+				<ul class="ulist">
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yule/7382.html" target="_blank" title="身材苗条，昆凌现身时装周">身材苗条，昆凌现身时装周</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yule/7381.html" target="_blank" title="新爸比修杰楷疼女儿，婚礼筹备中">新爸比修杰楷疼女儿，婚礼筹备中</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yule/7380.html" target="_blank" title="LadyGaGa崩溃录新歌！声援性侵受害者">LadyGaGa崩溃录新歌！声援性侵受害</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yule/7379.html" target="_blank" title="西恩潘告制作人诽谤 求偿千万美元">西恩潘告制作人诽谤 求偿千万美元</a></li>
+					  
+				</ul>
+			</div>
+						<div class="conlist">
+				<div class="hd">
+					<h2><a href="http://www.mnsmg.com/liangxing/" target="_blank" class="head-nav-list-item">两性</a></h2>
+					<a href="http://www.mnsmg.com/liangxing/" class="more">更多>></a>
+				</div>
+				<div class="mt10 clearfix">
+				  <ul class="piclist">
+				    <li class="imgArea"><a href="http://www.mnsmg.com/liangxing/17417.html" target="_blank" title="男性健康：盘点男人前列腺的7大宿敌"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/09/29/14434947370735_221x155.jpg" alt="男性健康：盘点男人前列腺的7大宿敌" width="110"><p>男性健康：盘点男人前列腺</p></a></li>
+				    <li class="txtArea">
+				      <ul class="txtlist">
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/liangxing/17415.html" target="_blank" title="男性健康：男人自慰有八大妙处">男性健康：男人自慰有八大</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/liangxing/17159.html" target="_blank" title="夹大腿能高潮 5个获得意外快感的性方式">夹大腿能高潮 5个获得意</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/liangxing/16903.html" target="_blank" title="两性健康：盘点七个最无知的避孕方法">两性健康：盘点七个最无知</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/liangxing/17414.html" target="_blank" title="男性健康：男人肾虚的九大明显症状">男性健康：男人肾虚的九大</a></li>
+										      </ul>
+				    </li>
+				  </ul>
+				  <div class="clearfix"></div>
+				</div>
+				<ul class="ulist">
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/liangxing/17158.html" target="_blank" title="头发三特征 反映男女性能力">头发三特征 反映男女性能力</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/liangxing/16902.html" target="_blank" title="两性健康：男性补肾要常吃5种肉">两性健康：男性补肾要常吃5种肉</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/liangxing/17413.html" target="_blank" title="男性健康：男人性能力自测的方法">男性健康：男人性能力自测的方法</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/liangxing/17157.html" target="_blank" title="夫妻闺房的性爱密语 你知道多少？">夫妻闺房的性爱密语 你知道多少？</a></li>
+					  
+				</ul>
+			</div>
+						<div class="conlist">
+				<div class="hd">
+					<h2><a href="http://www.mnsmg.com/fangchan/" target="_blank" class="head-nav-list-item">房产</a></h2>
+					<a href="http://www.mnsmg.com/fangchan/" class="more">更多>></a>
+				</div>
+				<div class="mt10 clearfix">
+				  <ul class="piclist">
+				    <li class="imgArea"><a href="http://www.mnsmg.com/fangchan/26422.html" target="_blank" title="开征房产税后 多房族真的要破产了？"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/10/14/1444808960408_221x155.jpg" alt="开征房产税后 多房族真的要破产了？" width="110"><p>开征房产税后 多房族真的</p></a></li>
+				    <li class="txtArea">
+				      <ul class="txtlist">
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fangchan/26420.html" target="_blank" title="消失的金九银十：三四线房产网站多萧瑟">消失的金九银十：三四线房</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fangchan/26419.html" target="_blank" title="女子交房后遭强拆，房产证被迫延期办理">女子交房后遭强拆，房产证</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fangchan/26417.html" target="_blank" title="交行报告：家庭多投资房产升值">交行报告：家庭多投资房产</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fangchan/26416.html" target="_blank" title="开发商的调研显示：楼市仍然是寒春">开发商的调研显示：楼市仍</a></li>
+										      </ul>
+				    </li>
+				  </ul>
+				  <div class="clearfix"></div>
+				</div>
+				<ul class="ulist">
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fangchan/26415.html" target="_blank" title="重磅:房产证70年权限或将改为永久产权">重磅:房产证70年权限或将改为永久产权</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fangchan/26412.html" target="_blank" title="王健林喊话房产：房产危机来了，别建了">王健林喊话房产：房产危机来了，别建了</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fangchan/26414.html" target="_blank" title="淘宝助力司法拍卖房产">淘宝助力司法拍卖房产</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fangchan/26411.html" target="_blank" title="房产转型：房地产+或决定房企未来">房产转型：房地产+或决定房企未来</a></li>
+					  
+				</ul>
+			</div>
+						<div class="conlist">
+				<div class="hd">
+					<h2><a href="http://www.mnsmg.com/chaye/" target="_blank" class="head-nav-list-item">茶叶</a></h2>
+					<a href="http://www.mnsmg.com/chaye/" class="more">更多>></a>
+				</div>
+				<div class="mt10 clearfix">
+				  <ul class="piclist">
+				    <li class="imgArea"><a href="http://www.mnsmg.com/chaye/31757.html" target="_blank" title="黑茶，给你看的见，摸得着的健康！"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/11/10/14471485067598_221x155.jpg" alt="黑茶，给你看的见，摸得着的健康！" width="110"><p>黑茶，给你看的见，摸得着</p></a></li>
+				    <li class="txtArea">
+				      <ul class="txtlist">
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chaye/31756.html" target="_blank" title="茶分六色各有千秋">茶分六色各有千秋</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chaye/31755.html" target="_blank" title="泡茶时，有了茶梗会更香？">泡茶时，有了茶梗会更香？</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chaye/31754.html" target="_blank" title="茶教授细说白茶的6大保健功用">茶教授细说白茶的6大保健</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chaye/31753.html" target="_blank" title="全手工的茶才是好喝的茶？">全手工的茶才是好喝的茶？</a></li>
+										      </ul>
+				    </li>
+				  </ul>
+				  <div class="clearfix"></div>
+				</div>
+				<ul class="ulist">
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chaye/31751.html" target="_blank" title="好茶知时节 秋茶如何保存 我教你">好茶知时节 秋茶如何保存 我教你</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chaye/31750.html" target="_blank" title="不喝过期茶 ，各大茶类的保质期你知道吗？">不喝过期茶 ，各大茶类的保质期你知道吗？</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chaye/31748.html" target="_blank" title="茶怎么发酵？原来是化学反应">茶怎么发酵？原来是化学反应</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chaye/31747.html" target="_blank" title="寻访“锡兰红茶”的前世今生">寻访“锡兰红茶”的前世今生</a></li>
+					  
+				</ul>
+			</div>
+						<div class="conlist">
+				<div class="hd">
+					<h2><a href="http://www.mnsmg.com/tuijian/" target="_blank" class="head-nav-list-item">推荐</a></h2>
+					<a href="http://www.mnsmg.com/tuijian/" class="more">更多>></a>
+				</div>
+				<div class="mt10 clearfix">
+				  <ul class="piclist">
+				    <li class="imgArea"><a href="http://www.mnsmg.com/tuijian/38922.html" target="_blank" title="法国举国上下为巴黎恐袭案遇难者默哀"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/11/17/14477252776122_221x155.gif" alt="法国举国上下为巴黎恐袭案遇难者默哀" width="110"><p>法国举国上下为巴黎恐袭案</p></a></li>
+				    <li class="txtArea">
+				      <ul class="txtlist">
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/tuijian/38930.html" target="_blank" title="巴黎恐怖袭击之后的街头">巴黎恐怖袭击之后的街头</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/tuijian/38917.html" target="_blank" title="吉萨金字塔亮灯悼念巴黎恐袭遇难者">吉萨金字塔亮灯悼念巴黎恐</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/tuijian/38921.html" target="_blank" title="手机之瘾 孤独之影">手机之瘾 孤独之影</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/tuijian/38856.html" target="_blank" title="法国对叙利亚IS发动空袭 发射20枚导弹">法国对叙利亚IS发动空袭</a></li>
+										      </ul>
+				    </li>
+				  </ul>
+				  <div class="clearfix"></div>
+				</div>
+				<ul class="ulist">
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/tuijian/38778.html" target="_blank" title="第四届英国杜伦灯光节开幕 打造城市视觉盛宴">第四届英国杜伦灯光节开幕 打造城市视觉盛</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/tuijian/38707.html" target="_blank" title="实拍中越边境扫雷全程 排雷兵赤手取雷">实拍中越边境扫雷全程 排雷兵赤手取雷</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/tuijian/38702.html" target="_blank" title="广西马山一民房爆炸5人死亡">广西马山一民房爆炸5人死亡</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/tuijian/38699.html" target="_blank" title="揭秘老版人民币上出现过的人物原型">揭秘老版人民币上出现过的人物原型</a></li>
+					  
+				</ul>
+			</div>
+						
+		</div>
+		<!-- conbox left end-->	
+		<!-- conbox right start-->		
+		<div class="conbox-r mt20" id="cpro_u109200021">
+			<script src="http://e.e70123.com/cpc/index.php?72452_2_16_0|1|2_d70000__" charset="gb2312"></script>
+		</div>
+		
+		<div class="conbox-r" style="margin-top:28px;" id="cpro_u109200026">
+			<script src="http://e.e70123.com/cpc/index.php?72452_2_13_0|1|2_d70000__" charset="gb2312"></script>
+		</div>
+		
+		<!-- conbox right end-->
+	</div>
+	<div class="clearfix"></div>
+	
+	<div style="border:1px solid #ddd;padding:5px;margin-top:10px;" >
+		<div id="cpro_u109200027" style="float:left;">
+        	</div>
+       
+		<div class="fl" style="margin-left:5px;">
+			<!--google 580x250-->
+			<div id="ads2"></div>
+		</div>
+		
+		 <div class="fl" style="margin-left:5px;">
+		 	<!--google 300x250-->
+			<div id="img_3"></div>
+		</div>
+		<div class="clear"></div>
+	</div>	
+	
+	<!-- 第三部分 -->
+	<div class="conbox clearfix">
+		<!-- conbox left start-->
+		<div class="conbox-l">
+						<div class="conlist">
+				<div class="hd">
+					<h2><a href="http://www.mnsmg.com/shuhua/" target="_blank" class="head-nav-list-item">书画</a></h2>
+					<a href="http://www.mnsmg.com/shuhua/" class="more">更多>></a>
+				</div>
+				<div class="mt10 clearfix">
+				  <ul class="piclist">
+				    <li class="imgArea"><a href="http://www.mnsmg.com/shuhua/26468.html" target="_blank" title="梵高油画的颜色为何没跑赢时间"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/10/15/14448918573868_221x155.jpg" alt="梵高油画的颜色为何没跑赢时间" width="110"><p>梵高油画的颜色为何没跑赢</p></a></li>
+				    <li class="txtArea">
+				      <ul class="txtlist">
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/shuhua/26476.html" target="_blank" title="欣赏书法不是看图识字">欣赏书法不是看图识字</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/shuhua/26473.html" target="_blank" title="张大千荷花各期有何主要特点">张大千荷花各期有何主要特</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/shuhua/26466.html" target="_blank" title="中国书法之草书五关">中国书法之草书五关</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/shuhua/26464.html" target="_blank" title="王羲之怎么抓毛笔？">王羲之怎么抓毛笔？</a></li>
+										      </ul>
+				    </li>
+				  </ul>
+				  <div class="clearfix"></div>
+				</div>
+				<ul class="ulist">
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/shuhua/26461.html" target="_blank" title="关于书家择笔的问题">关于书家择笔的问题</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/shuhua/26459.html" target="_blank" title="色彩教学起步的重要性">色彩教学起步的重要性</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/shuhua/26457.html" target="_blank" title="鉴别书画真赝 多看多问做足功课">鉴别书画真赝 多看多问做足功课</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/shuhua/26453.html" target="_blank" title="莫高窟壁画的平面造型艺术">莫高窟壁画的平面造型艺术</a></li>
+				  
+				</ul>
+			</div>
+						<div class="conlist">
+				<div class="hd">
+					<h2><a href="http://www.mnsmg.com/chongwu/" target="_blank" class="head-nav-list-item">宠物</a></h2>
+					<a href="http://www.mnsmg.com/chongwu/" class="more">更多>></a>
+				</div>
+				<div class="mt10 clearfix">
+				  <ul class="piclist">
+				    <li class="imgArea"><a href="http://www.mnsmg.com/chongwu/38432.html" target="_blank" title="太萌太有爱！动物世界“亲子照”盘点"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/11/12/14472915996616_221x155.gif" alt="太萌太有爱！动物世界“亲子照”盘点" width="110"><p>太萌太有爱！动物世界“亲</p></a></li>
+				    <li class="txtArea">
+				      <ul class="txtlist">
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chongwu/38390.html" target="_blank" title="一只金毛网红Aspen喜欢远足旅游">一只金毛网红Aspen喜</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chongwu/37865.html" target="_blank" title="狗宝宝练习时偷懒 跑妈妈怀里撒娇萌翻网友">狗宝宝练习时偷懒 跑妈妈</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chongwu/32486.html" target="_blank" title="呆萌动物宝宝捧在手里怕化掉">呆萌动物宝宝捧在手里怕化</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chongwu/31973.html" target="_blank" title="可爱小松鼠试戴鬼脸南瓜 迎接万圣节">可爱小松鼠试戴鬼脸南瓜 </a></li>
+										      </ul>
+				    </li>
+				  </ul>
+				  <div class="clearfix"></div>
+				</div>
+				<ul class="ulist">
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chongwu/31006.html" target="_blank" title="这只哈士奇已经学会了打扮">这只哈士奇已经学会了打扮</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chongwu/26749.html" target="_blank" title="抓拍到兔子误食带刺植物搞怪表情">抓拍到兔子误食带刺植物搞怪表情</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chongwu/26337.html" target="_blank" title="坏笑的小猫咪">坏笑的小猫咪</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/chongwu/5560.html" target="_blank" title="一对非常可爱的日本狗兄弟">一对非常可爱的日本狗兄弟</a></li>
+				  
+				</ul>
+			</div>
+						<div class="conlist">
+				<div class="hd">
+					<h2><a href="http://www.mnsmg.com/fongxiong/" target="_blank" class="head-nav-list-item">丰胸</a></h2>
+					<a href="http://www.mnsmg.com/fongxiong/" class="more">更多>></a>
+				</div>
+				<div class="mt10 clearfix">
+				  <ul class="piclist">
+				    <li class="imgArea"><a href="http://www.mnsmg.com/fongxiong/12549.html" target="_blank" title="女人别忙着丰胸 要学会保护胸部"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/09/28/14434269690263_221x155.jpg" alt="女人别忙着丰胸 要学会保护胸部" width="110"><p>女人别忙着丰胸 要学会保</p></a></li>
+				    <li class="txtArea">
+				      <ul class="txtlist">
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fongxiong/12805.html" target="_blank" title="盘点女性产后的丰胸方法 快速提升胸部">盘点女性产后的丰胸方法 </a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fongxiong/12294.html" target="_blank" title="丰胸也要选时机 关键时刻cup大涨">丰胸也要选时机 关键时刻</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fongxiong/12550.html" target="_blank" title="女人哪些坏习惯悄悄偷走你的乳房">女人哪些坏习惯悄悄偷走你</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fongxiong/12811.html" target="_blank" title="睡前五分钟丰胸 学会四个按摩手法！">睡前五分钟丰胸 学会四个</a></li>
+										      </ul>
+				    </li>
+				  </ul>
+				  <div class="clearfix"></div>
+				</div>
+				<ul class="ulist">
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fongxiong/12300.html" target="_blank" title="丰胸吃什么好 养生汤和茶助你健康丰胸">丰胸吃什么好 养生汤和茶助你健康丰胸</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fongxiong/12556.html" target="_blank" title="女人胸部护理5阶段 不同呵护远离乳腺癌">女人胸部护理5阶段 不同呵护远离乳腺癌</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fongxiong/12812.html" target="_blank" title="睡前按摩丰胸 轻松按出大咪咪">睡前按摩丰胸 轻松按出大咪咪</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/fongxiong/12301.html" target="_blank" title="丰胸吃什么好 养生汤和茶帮你健康丰胸">丰胸吃什么好 养生汤和茶帮你健康丰胸</a></li>
+				  
+				</ul>
+			</div>
+						<div class="conlist">
+				<div class="hd">
+					<h2><a href="http://www.mnsmg.com/caizhuang/" target="_blank" class="head-nav-list-item">彩妆</a></h2>
+					<a href="http://www.mnsmg.com/caizhuang/" class="more">更多>></a>
+				</div>
+				<div class="mt10 clearfix">
+				  <ul class="piclist">
+				    <li class="imgArea"><a href="http://www.mnsmg.com/caizhuang/10502.html" target="_blank" title="魅惑妆发+性感紧身裙 百变女郎惊艳全场"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/09/28/14434233216736_221x155.jpg" alt="魅惑妆发+性感紧身裙 百变女郎惊艳全场" width="110"><p>魅惑妆发+性感紧身裙 百</p></a></li>
+				    <li class="txtArea">
+				      <ul class="txtlist">
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/caizhuang/10247.html" target="_blank" title="眼影派or美睫派 奢华系新奇眼妆">眼影派or美睫派 奢华系</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/caizhuang/9990.html" target="_blank" title="快速画出正确腮红 修容变嫩一手抓！">快速画出正确腮红 修容变</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/caizhuang/9732.html" target="_blank" title="亮丽的美甲 让你指尖散发迷人魅力">亮丽的美甲 让你指尖散发</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/caizhuang/10242.html" target="_blank" title="看六大秀场如何打造冬季棕色烟熏妆">看六大秀场如何打造冬季棕</a></li>
+										      </ul>
+				    </li>
+				  </ul>
+				  <div class="clearfix"></div>
+				</div>
+				<ul class="ulist">
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/caizhuang/10498.html" target="_blank" title="高圆圆演绎春夏清新淡妆 橘棕眼妆粉裸唇">高圆圆演绎春夏清新淡妆 橘棕眼妆粉裸唇</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/caizhuang/9731.html" target="_blank" title="亚洲人如何克服眼睛浮肿 驾驭亮色眼影">亚洲人如何克服眼睛浮肿 驾驭亮色眼影</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/caizhuang/9988.html" target="_blank" title="快速塑造水汪大眼睛 让男人逃不开你的手掌心">快速塑造水汪大眼睛 让男人逃不开你的手掌</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/caizhuang/10501.html" target="_blank" title="魅力彩妆OL时尚美甲呈现别致的优雅气质">魅力彩妆OL时尚美甲呈现别致的优雅气质</a></li>
+				  
+				</ul>
+			</div>
+						<div class="conlist">
+				<div class="hd">
+					<h2><a href="http://www.mnsmg.com/yingyu/" target="_blank" class="head-nav-list-item">英语</a></h2>
+					<a href="http://www.mnsmg.com/yingyu/" class="more">更多>></a>
+				</div>
+				<div class="mt10 clearfix">
+				  <ul class="piclist">
+				    <li class="imgArea"><a href="http://www.mnsmg.com/yingyu/32188.html" target="_blank" title="你是脑残么？！英文如何吐槽别人“脑残”？"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/11/02/14464462861391_221x155.gif" alt="你是脑残么？！英文如何吐槽别人“脑残”？" width="110"><p>你是脑残么？！英文如何吐</p></a></li>
+				    <li class="txtArea">
+				      <ul class="txtlist">
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yingyu/32187.html" target="_blank" title="日常英语中的霸气口头禅">日常英语中的霸气口头禅</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yingyu/32186.html" target="_blank" title="莎士比亚发明的10个常用英文单词">莎士比亚发明的10个常用</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yingyu/32185.html" target="_blank" title="英伦style：12句地道英式表达">英伦style：12句地</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yingyu/32184.html" target="_blank" title="从此爱上与老外谈话：16个英文缩略词大盘点">从此爱上与老外谈话：16</a></li>
+										      </ul>
+				    </li>
+				  </ul>
+				  <div class="clearfix"></div>
+				</div>
+				<ul class="ulist">
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yingyu/32183.html" target="_blank" title="学会这些暖心话 你也可以做大白">学会这些暖心话 你也可以做大白</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yingyu/32182.html" target="_blank" title="10个身体部位的英文 你肯定不会说">10个身体部位的英文 你肯定不会说</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yingyu/32181.html" target="_blank" title="“请客”与“AA制”怎么说？">“请客”与“AA制”怎么说？</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/yingyu/32178.html" target="_blank" title="冷天学热词：秋裤用英文怎么说？">冷天学热词：秋裤用英文怎么说？</a></li>
+				  
+				</ul>
+			</div>
+						<div class="conlist">
+				<div class="hd">
+					<h2><a href="http://www.mnsmg.com/xiuxian/" target="_blank" class="head-nav-list-item">休闲</a></h2>
+					<a href="http://www.mnsmg.com/xiuxian/" class="more">更多>></a>
+				</div>
+				<div class="mt10 clearfix">
+				  <ul class="piclist">
+				    <li class="imgArea"><a href="http://www.mnsmg.com/xiuxian/9409.html" target="_blank" title="中国无印良品，他能成功吗？"><img src="http://cloudcdn.yousee.com/rd.121.com/uploads//2015/09/25/14431781707691_221x155.jpg" alt="中国无印良品，他能成功吗？" width="110"><p>中国无印良品，他能成功吗</p></a></li>
+				    <li class="txtArea">
+				      <ul class="txtlist">
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/xiuxian/7828.html" target="_blank" title="凛冬将至！来西班牙岛屿上度假吧">凛冬将至！来西班牙岛屿上</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/xiuxian/7823.html" target="_blank" title="和危险杀手漫步时光：鲨鱼栖息地潜水">和危险杀手漫步时光：鲨鱼</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/xiuxian/7824.html" target="_blank" title="在极昼穿越北极圈">在极昼穿越北极圈</a></li>
+										        <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/xiuxian/7825.html" target="_blank" title="意大利最迷人的湖：惊艳的马焦雷湖风景美如画">意大利最迷人的湖：惊艳的</a></li>
+										      </ul>
+				    </li>
+				  </ul>
+				  <div class="clearfix"></div>
+				</div>
+				<ul class="ulist">
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/xiuxian/7826.html" target="_blank" title="你真的知道十年美签的用途么？">你真的知道十年美签的用途么？</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/xiuxian/7830.html" target="_blank" title="粉丝福利：《行尸走肉》 僵尸邮轮明年启航">粉丝福利：《行尸走肉》 僵尸邮轮明年启航</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/xiuxian/7831.html" target="_blank" title="有钱任性？来这些烧钱的私人岛屿吧">有钱任性？来这些烧钱的私人岛屿吧</a></li>
+								  <li class="item"><span class="dot"></span><a href="http://www.mnsmg.com/xiuxian/7832.html" target="_blank" title="未来酒店：神奇的设计、浮动建筑">未来酒店：神奇的设计、浮动建筑</a></li>
+				  
+				</ul>
+			</div>
+					
+		</div>
+		<!-- conbox left end-->	
+		<!-- conbox right start-->
+		<div class="mt20" style="border:1px solid #ddd; float:right; width:288px; padding-left:10px;" id="cpro_u109200308">
+		</div>
+		<div id="cpro_u109200028" style="float:right;margin-top:28px;">
+		</div>
+		<!-- conbox right end-->
+	</div>
+	<div class="clearfix"></div>
+	<div class="mt10">
+		<div id="img_4" class="fl" style="width:960px;"></div>
+		<div id="cpro_u109200025" style="float:left;background:#fffff;padding-left:5px; border:1px solid #ddd;">
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	
+	<!-- 第五部分 -->
+	<div class="conbox clearfix" style="margin-top:10px;">
+	</div>	
+	<div class="clear"></div>
+</div>
+</div>
+<!-- body end -->
+
+<!-- footer start -->
+<div id="footer">
+	<div class="footer-cont">
+		<div class="sitemap">
+				<div class="sitemap-title">网站地图</div>
+				<ul class="sitemap-list clearfix">
+										<li><a target="_blank" href="http://www.mnsmg.com/tuijian/">推荐</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/dongtai/">动态</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/gaoxiao/">搞笑</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/duanzi/">段子</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/xiaohua/">笑话</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/qingsong/">轻松</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/chongwu/">宠物</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/lvyou/">旅游</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/lieqi/">猎奇</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/guoji/">国际</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/nvren/">女人</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/shehui/">社会</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/licai/">理财</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/jinrong/">金融</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/baoxian/">保险</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/touzi/">投资</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/zhengquan/">证券</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/cailiao/">材料</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/muying/">母婴</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/junshi/">军事</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/jiankang/">健康</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/tiyu/">体育</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/keji/">科技</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/sheji/">设计</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/ertong/">儿童</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/yule/">娱乐</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/jianzhu/">建筑</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/xiuxian/">休闲</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/canyin/">餐饮</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/qiche/">汽车</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/tupian/">图片</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/shouji/">手机</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/jiaoyu/">教育</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/shishang/">时尚</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/baoguangtai/">曝光台</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/hufu/">护肤</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/gouwu/">购物</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/fushi/">服饰</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/caizhuang/">彩妆</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/shoushen/">瘦身</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/fongxiong/">丰胸</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/zhengrong/">整容</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/meishi/">美食</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/sheying/">摄影</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/yingyang/">营养</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/sushi/">素食</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/baojian/">保健</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/liangxing/">两性</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/yangsheng/">养生</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/xinli/">心理</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/dianying/">电影</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/lishi/">历史</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/fangchan/">房产</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/jiazheng/">家政</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/huanbao/">环保</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/mingxing/">明星</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/meirong/">美容</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/haitao/">海淘</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/youxi/">游戏</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/yinyue/">音乐</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/fazhi/">法治</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/shuhua/">书画</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/nba/">NBA</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/zuqiu/">足球</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/redianrenwu/">热点人物</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/lishirenwu/">历史人物</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/yingyu/">英语</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/chuguo/">出国</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/caijing/">财经</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/jijin/">基金</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/xingzuo/">星座</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/guanggao/">广告</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/chaye/">茶叶</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/dianzi/">电子</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/zongyi/">综艺</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/dongman/">动漫</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/zhubao/">珠宝</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/xiangshui/">香水</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/anfang/">安防</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/weisheng/">卫生</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/hulianwang/">互联网+</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/chuangtou/">创投</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/gongyi/">公益</a></li>
+										<li><a target="_blank" href="http://www.mnsmg.com/jingyou/">精油</a></li>
+									</ul>
+				<div class="clearfix"></div>
+			</div>
+		<div class="footer-detail copyright">Copyright © 2015 Mnsmg.com . all rights reserved.</div>
+	</div>
+</div><!-- footer end -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?18f1dedf23f93d59ea49268ef55c9865";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
+

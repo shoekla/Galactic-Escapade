@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+        <link href='http://fonts.googleapis.com/css?family=Orbitron:400,900' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="Escapadestyles.css" />
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+        <script src='GalacticEscapade.js'></script>
+
+		<title></title>
+
+	</head>
+
+	<body>
+	
+	<audio loop>
+        <source src="VD.mp3" type="audio/mpeg"></source>
+    </audio>
+	
+	
+	<div id="loose"><p id="los"><h1 id="h1">YOU LOST</h1>
+
+	<br/>
+
+	    </p><div id='began' >Play Again</div></div>
+	    <div id="win"><p id="won">YOU WIN
+	   
+	     
+	        
+	    </p><div id='begun' >Play Again</div></div>
+<div id="gallery"><div id="startback">Back</div>
+Planets
+<div id="scrolling">
+    
+    <div id="panel" class="erisstat"><img src="http://starchild.gsfc.nasa.gov/Images/StarChild/solar_system_level2/eris_and_dysnomia_485.jpg" id="planetimage"><p id="panelname">Dwarf Planet: Eris</p></div>
+    <div id="panel" class="ceresstat"><img src="http://www.lunarplanner.com/Images/asteroids/Ceres-2008.jpg" id="planetimage"><p id="panelname">Dwarf Planet: Ceres</p></div>
+    <div id="panel" class="plutostat"><img src="http://static4.wikia.nocookie.net/__cb20121226235547/ultra/images/b/b3/Pluto_planet.jpg" id="planetimage"><p id="panelname">Pluto</p></div>
+    <div id="panel" class="nepstat"><img src="http://solarsystem.nasa.gov/multimedia/gallery/Neptune_Full.jpg" id="planetimage"><p id="panelname">Neptune</p></div>
+    <div id="panel" class="urstat"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRrnY9bsdLQIZ6cz4IZXnY3jbLCybJwMdOqcqy29CP1cxZTej291A" id="planetimage"><p id="panelname">Uranus</p></div>
+    <div id="panel" class="satstat"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjBw5Zdyy3xsAIPi4eH2PiqFPQlEPhYUfHKOPmPuzg_s1VmB-cdQ" id="planetimage"><p id="panelname">Saturn</p></div>
+    <div id="panel" class="jupstat"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSfNhhwv3kwohBI3b6Dm5kdmedxaQqiftZYGu-z8P5RFmWSpSyCuA" id="planetimage"><p id="panelname">Jupiter</p></div>
+    <div id="panel" class="marsstat"><img src="http://media.npr.org/assets/img/2013/05/02/mars-nasa_custom-745ff15ed1a80d8cbb47a4cb44186c5b6bea41e3-s6-c30.jpg" id="planetimage"><p id="panelname">Mars</p></div>
+    <div id="panel" class="earthstat"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQraf8ztAZ3_bFoVNk0_Sy6v7PfNwlcka5YB0RtmrFg1c29XeLO" id="planetimage"><p id="panelname">Earth</p></div>
+</div>
+</div>
+
+<div id="eris"><div id="erisback">Back</div>Dwarf Planet Eris<div id="eris2"><img src="http://starchild.gsfc.nasa.gov/Images/StarChild/solar_system_level2/eris_and_dysnomia_485.jpg" id="statimage"><p id="stattext">The Dwarf Planet Eris is the largest dwarf planet in the Solar System. It is 27% more massive than pluto and has an orbital period of 557 years.</p></div></div>
+
+<div id="ceres"><div id="ceresback">Back</div>Dwarf Planet Ceres<div id="eris2"><img src="http://upload.wikimedia.org/wikipedia/commons/f/fc/Ceres_optimized.jpg" id="statimage"><p id="stattext">The categorization of Ceres has changed more than once and has been the subject of some disagreement. Johann Elert Bode believed Ceres to be the "missing planet" he had proposed to exist between Mars and Jupiter, at a distance of 419 million km (2.8 AU) from the Sun.</p></div></div>
+
+<div id="pluto"><div id="plutoback">Back</div>Pluto<div id="eris2"><img src="http://www.planetsforkids.org/upload/-Pluto-a.jpg" id="statimage"><p id="stattext">Pluto is composed primarily of rock and ice[14] and is relatively small, approximately one-sixth the mass of the Moon and one-third its volume.It was also known as Planet X for some time. Now it is a dwarf planet.</p></div></div>
+
+<div id="neptune"><div id="nepback">Back</div>Neptune<div id="eris2"><img src="data:image/jpeg;base64,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" id="statimage"><p id="stattext">Neptune is the eighth and farthest planet from the Sun in the Solar System. It is the fourth-largest planet by diameter and the third-largest by mass. Among the gaseous planets in the solar system, Neptune is the most dense. Neptune is 17 times the mass of Earth and is slightly more massive than its near-twin Uranus, which is 15 times the mass of Earth but not as dense.</p></div></div>
+
+<div id="Uranus"><div id="Uranusback">Back</div>Uranus<div id="eris2"><img src="data:image/jpeg;base64,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" id="statimage"><p id="stattext">Uranus is the seventh planet from the Sun. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System. Uranus is similar in composition to Neptune, and both are of different chemical composition than the larger gas giants Jupiter and Saturn.</p></div></div>
+
+<div id="saturn"><div id="saturnback">Back</div>Saturn<div id="eris2"><img src="http://starchild.gsfc.nasa.gov/Images/StarChild/solar_system_level2/saturn_big.gif" id="statimage"><p id="stattext">Saturn is the sixth planet from the Sun and the second largest planet in the Solar System, after Jupiter. Named after the Roman god of agriculture, its astronomical symbol (â™„) represents the god's sickle. Saturn is a gas giant with an average radius about nine times that of Earth.[10][11] While only one-eighth the average density of Earth, with its larger volume Saturn is just over 95 times more massive.</p></div></div>
+
+<div id="jup"><div id="jupback">Back</div>Jupiter<div id="eris2"><img src="data:image/jpeg;base64,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" id="statimage"><p id="stattext">Jupiter is the fifth planet from the Sun and the largest planet in the Solar System.[11] It is a gas giant with mass one-thousandth of that of the Sun but is two and a half times the mass of all the other planets in the Solar System combined. Jupiter is classified as a gas giant along with Saturn, Uranus and Neptune.</p></div></div>
+
+<div id="mars"><div id="marback">Back</div>Mars<div id="eris2"><img src="data:image/jpeg;base64,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" id="statimage"><p id="stattext">Mars is the fourth planet from the Sun and the second smallest planet in the Solar System, after Mercury. Named after the Roman god of war, it is often described as the "Red Planet" because the iron oxide prevalent on its surface gives it a reddish appearance.[15] Mars is a terrestrial planet with a thin atmosphere, having surface features reminiscent both of the impact craters of the Moon and the volcanoes, valleys, deserts, and polar ice caps of Earth. </p></div></div>
+
+<div id="earth"><div id="earthback">Back</div>Earth<div id="eris2"><img src="http://d1jqu7g1y74ds1.cloudfront.net/wp-content/uploads/2009/10/globe_west_2048.jpg" id="statimage"><p id="stattext">Earth is the third planet from the Sun. It is the densest and fifth-largest of the eight planets in the Solar System. It is also the largest of the Solar System's four terrestrial planets. It is sometimes referred to as the world or the Blue Planet.</p></div></div>
+<div id="ss"><p id="sss">You capture the sheild on Saturns Moon but the aliens are still attacking
+<br/><div id="scon">Head back to Earth</div>
+</p></div>
+
+<div id="level1"><p>Level 1</p></div>
+<div id="level2"><p>Level 2</p></div>
+<div id="level3"><p>Level 3</p></div>
+<div id="level4"><p>Level 4</p></div>
+<div id="level5"><p>Level 5</p></div>
+<div id="level6"><p>Level 6</p></div>
+<div id="level7"><p>Level 7</p></div>
+<div id="level8"><p>Level 8</p></div>
+<div id="level9"><p>Level 9</p></div>
+<div id="level10"><p>Level 10</p></div>
+<div id="level11"><p>Level 11</p></div>
+
+
+
+		<div id='info'>
+
+				<div id='instructions'>
+
+			<h1><center><u>Galactic Escapade</u></center></h1>
+				<div id='con'>Conitnue</div>
+                 <div id='story'> <h3>The Story:</h3>
+			 hhhhhhhhhhhhhhhhhhhhh	You are an Astronaut who searches space for human improvment. You find the cure for Cancer on the Dwarf planet called
+				<br/>Eris, but you find selfish aliens that want to keep the cure for themselves.You take the cure and head for
+				<br/> Earth, but you are followed by Aliens...
+			<br/>It's simple,pick a difficulty,click start, and use your mouse to collect as many stars as you can</div>
+			<br/>
+			<div id='continue'>Conitnue</div>
+			
+		<div id='rule'>	
+
+				<h3>The Rules:</h3>
+          1. Collect the stars or boxs, avoid the aliens.
+
+					<br/>2. If you hit an alien you lose a life. After each level you gain a life.If you get a star your score goes up.
+
+					<br/>3.  After you collect an amount of stars you advance to the next level 
+
+					<br/>4. the next level speeds up and has more objects
+
+					<br/>5. Collect hearts to get extra lives
+
+					<br/>6. We suggest you play on Intermediate first then adjust.
+
+					<br/>7.  Lose all your lives and GAME OVER.....</p>
+
+
+					<br/>
+                    
+					<div id='begin'>Play</div>
+					<div id='stat'>Mission Stats</div>
+					</div>
+
+				</div>
+
+	</div>
+	
+	
+
+
+
+	<div id='frame'>
+
+			<div id='title'>Planet:</div>
+
+			<div id='inner'>
+
+			    <div id ='other'><div id='box'></div></div>
+
+				
+
+				<div class='good'></div>
+
+				<div class='bad'></div>
+
+				<div class='ugly'></div>
+
+			</div>
+
+		</div>
+		
+		
+		
+
+		
+
+		<div id='left'>
+
+			<div id='clock'>
+
+				<div id='top'>
+
+					<div id='mins'>Minutes</div>
+
+					<div id='secs'>Seconds</div>
+
+				</div>
+
+				<div id='bottom'></div>
+
+			</div>
+
+			<div id='score'>
+
+				Score :<br/> 000000
+
+			</div>
+
+			<div id='button'>
+
+				<div id='lives'>Lives</div>
+
+				<div id='boxLeft'>Stars Left</div>
+
+				<div id='level'>level</div>
+
+				<div id='easy'>Rookie</div>
+
+				<div id='hard'>Intermediate</div>
+
+				<div id='extreme'>Galactic </div>
+               
+				<div id='start'>Start/ Start Over
+				
+				</div>
+
+				<div id='stop'>Quit</div>
+				<div id='pause'>Pause</div>
+
+			</div>
+
+		</div>
+
+	
+
+			</body>
+			
+
+</html>
+	
